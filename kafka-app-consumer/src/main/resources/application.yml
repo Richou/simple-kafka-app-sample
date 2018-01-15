@@ -1,0 +1,15 @@
+messaging:
+  broker:
+    hosts: localhost:9092,localhost:9093,localhost:9094
+  consumer:
+    auto-commit-interval-ms: 200
+    session-timeout-ms: 10000
+    offset-reset: earliest
+    max-poll-interval-ms: 10000
+  topics:
+    - names: musics
+      group: musics-grp
+      consumer-number: 5
+    - names: artists
+      group: artists-grp
+      consumer-number: 1
