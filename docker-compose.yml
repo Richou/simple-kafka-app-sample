@@ -1,7 +1,7 @@
 version: '2.1'
 services:
   zookeeper:
-    image: zookeeper
+    image: wurstmeister/zookeeper
     container_name: hnr-zookeeper
     ports:
       - 2181:2181
@@ -15,7 +15,8 @@ services:
     links:
       - zookeeper
     environment:
-      - KAFKA_ADVERTISED_HOST=kafka-1
+      - KAFKA_PORT=9092
+      - KAFKA_ADVERTISED_HOST_NAME=${ADVERTISED_HOSTNAME}
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_CREATE_TOPICS=musics:15:3,artists:3:3
   kafka-2:
@@ -28,7 +29,8 @@ services:
     links:
       - zookeeper
     environment:
-      - KAFKA_ADVERTISED_HOST=kafka-2
+      - KAFKA_PORT=9093
+      - KAFKA_ADVERTISED_HOST_NAME=${ADVERTISED_HOSTNAME}
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_CREATE_TOPICS=musics:15:3,artists:3:3
   kafka-3:
@@ -41,6 +43,7 @@ services:
     links:
       - zookeeper
     environment:
-      - KAFKA_ADVERTISED_HOST=kafka-3
+      - KAFKA_PORT=9094
+      - KAFKA_ADVERTISED_HOST_NAME=${ADVERTISED_HOSTNAME}
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_CREATE_TOPICS=musics:15:3,artists:3:3
