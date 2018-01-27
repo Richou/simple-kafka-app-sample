@@ -1,12 +1,12 @@
 package com.heanoria.reminders.kafkasample.consumer.datas;
 
-public class MessageContainer {
+public class MessageContainer<T> {
 
 	private final boolean error;
-	private final String value;
+	private final T value;
 	private final Exception exception;
 
-	private MessageContainer(boolean error, String value, Exception exception) {
+	private MessageContainer(boolean error, T value, Exception exception) {
 		this.error = error;
 		this.value = value;
 		this.exception = exception;
@@ -16,7 +16,7 @@ public class MessageContainer {
 		return error;
 	}
 
-	public String getValue() {
+	public T getValue() {
 		return value;
 	}
 
@@ -24,18 +24,18 @@ public class MessageContainer {
 		return exception;
 	}
 
-	public static MessageContainerBuilder builder() {
-		return new MessageContainerBuilder();
+	public static <T> MessageContainerBuilder<T> builder() {
+		return new MessageContainerBuilder<>();
 	}
 
-	public static final class MessageContainerBuilder {
-		private String value;
+	public static final class MessageContainerBuilder<T> {
+		private T value;
 		private Exception exception;
 
 		private MessageContainerBuilder() {
 		}
 
-		public MessageContainerBuilder value(String value) {
+		public MessageContainerBuilder value(T value) {
 			this.value = value;
 			return this;
 		}
@@ -45,12 +45,12 @@ public class MessageContainer {
 			return this;
 		}
 
-		public MessageContainer buildValidMessage() {
-			return new MessageContainer(false, value, null);
+		public MessageContainer<T> buildValidMessage() {
+			return new MessageContainer<>(false, value, null);
 		}
 
-		public MessageContainer buildErrorMessage() {
-			return new MessageContainer(true, null, exception);
+		public MessageContainer<T> buildErrorMessage() {
+			return new MessageContainer<>(true, null, exception);
 		}
 	}
 }

@@ -10,7 +10,7 @@ export default class ProducerService {
     sendMessages(topic, payloads) {
         this.producer.on('ready', () => {
             console.log('Producer is ready !');
-            this.producer.send([{topic: topic, messages: payloads, timestamp: Date.now()}], (err, data) => {
+            this.producer.send([{topic: topic, messages: payloads, groupId: 'musics-grp'}], (err, data) => {
                 console.log(err || data);
                 process.exit()
             })

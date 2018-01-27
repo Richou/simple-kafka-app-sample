@@ -12,6 +12,7 @@ public class ConsumerProperties {
     private String offsetReset;
     private Integer maxPollIntervalMs;
     private Integer pollTimeoutMs;
+    private Integer maxPollRecords;
 
     public Integer getAutoCommitIntervalMs() {
         return autoCommitIntervalMs;
@@ -51,5 +52,13 @@ public class ConsumerProperties {
 
     public void setPollTimeoutMs(Integer pollTimeoutMs) {
         this.pollTimeoutMs = pollTimeoutMs;
+    }
+
+    public Integer getMaxPollRecords() {
+        return maxPollRecords;
+    }
+
+    public void setMaxPollRecords(Integer maxPollRecords) {
+        this.maxPollRecords = maxPollRecords;
     }
 }

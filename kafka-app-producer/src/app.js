@@ -1,4 +1,7 @@
 import ProducerService from "./services/ProducerService";
 
+const musics = require('../assets/musics');
+
 const producerService = new ProducerService();
-producerService.sendMessages('musics', ['coucou', 'oui']);
+const payloads = musics.map(music => JSON.stringify(music));
+producerService.sendMessages('musics', payloads);

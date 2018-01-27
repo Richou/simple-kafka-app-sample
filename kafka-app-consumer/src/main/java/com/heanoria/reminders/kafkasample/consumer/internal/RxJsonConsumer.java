@@ -14,21 +14,21 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Properties;
 
-public class RxSimpleConsumer {
+public class RxJsonConsumer {
 
-    private static final Logger logger = LoggerFactory.getLogger(RxSimpleConsumer.class);
+    private static final Logger logger = LoggerFactory.getLogger(RxJsonConsumer.class);
 
-    private static final int POLL_TIMEOUT_MS = 1000;
     private final ConsumerProperties consumerProperties;
     private final BrokerProperties brokerProperties;
     private final TopicProperties topicProperties;
-    private final KafkaConsumer<String, String> consumer;
+    private final KafkaConsumer<String, Serializable> consumer;
     private final int pollTimeoutMs;
 
-    public RxSimpleConsumer(ConsumerProperties consumerProperties, BrokerProperties brokerProperties, TopicProperties topicProperties) {
+    public RxJsonConsumer(ConsumerProperties consumerProperties, BrokerProperties brokerProperties, TopicProperties topicProperties) {
         this.consumerProperties = consumerProperties;
         this.brokerProperties = brokerProperties;
         this.topicProperties = topicProperties;
@@ -41,8 +41,9 @@ public class RxSimpleConsumer {
             this.consumer.subscribe(Arrays.asList(topicProperties.getNames().split(",")));
             while (true) {
                 try {
-                    ConsumerRecords<String, String> records = consumer.poll(pollTimeoutMs);
-                    for (ConsumerRecord<String, String> record : records) {
+                    ConsumerRecords<String, Serializable> records = consumer.poll(pollTimeoutMs);
+                    if (!records.isEmpty()) logger.info("Received {} message from {} topic(s)", records.count(), topicProperties.getNames());
+                    for (ConsumerRecord<String, Serializable> record : records) {
                         if (record.value() != null) {
                             logger.debug("Received message, with key {} and offset {} with value {} on topic {}", record.key(), record.offset(), record.value(), record.topic());
                             emitter.onNext(MessageContainer.builder().value(record.value()).buildValidMessage());
@@ -65,8 +66,9 @@ public class RxSimpleConsumer {
         consumerConfig.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
         consumerConfig.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, consumerProperties.getSessionTimeoutMs());
         consumerConfig.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-        consumerConfig.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        consumerConfig.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, topicProperties.getDeserializer());
         consumerConfig.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, consumerProperties.getMaxPollIntervalMs());
+        consumerConfig.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, consumerProperties.getMaxPollRecords());
         return consumerConfig;
     }
 }
