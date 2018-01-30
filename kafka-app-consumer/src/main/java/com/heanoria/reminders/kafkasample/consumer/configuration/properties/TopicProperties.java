@@ -5,6 +5,7 @@ public class TopicProperties {
 	private String names;
 	private String group;
 	private Integer consumerNumber;
+	private String deserializer;
 
 	public String getNames() {
 		return names;
@@ -28,5 +29,13 @@ public class TopicProperties {
 
 	public void setConsumerNumber(Integer consumerNumber) {
 		this.consumerNumber = consumerNumber;
+	}
+
+	public String getDeserializer() {
+		return deserializer;
+	}
+
+	public void setDeserializer(String deserializer) {
+		this.deserializer = deserializer;
 	}
 }

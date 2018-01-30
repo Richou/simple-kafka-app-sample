@@ -17,7 +17,16 @@ public class MusicsTopicObserver implements Observer<MessageContainer> {
 
     @Override
     public void onNext(MessageContainer messageContainer) {
-        logger.info("Received {}", messageContainer.getValue());
+        try {
+            if (messageContainer.isError()) {
+                logger.error("Error received", messageContainer.getException());
+            } else {
+                logger.info("Received {}", messageContainer.getValue());
+                Thread.sleep(500);
+            }
+        } catch (InterruptedException exception) {
+            logger.error("Interrupted", exception);
+        }
     }
 
     @Override
