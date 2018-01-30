@@ -1,6 +1,6 @@
 messaging:
   broker:
-    hosts: localhost:9092
+    hosts: localhost:9092,localhost:9093,localhost:9094
   consumer:
     session-timeout-ms: 10000
     offset-reset: earliest

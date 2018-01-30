@@ -17,6 +17,7 @@
 
     <modules>
         <module>kafka-app-consumer</module>
+        <module>kafka-app-producer</module>
     </modules>
 
     <properties>
