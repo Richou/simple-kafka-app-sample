@@ -1,4 +1,4 @@
-package com.heanoria.reminders.kafkasample.consumer.datas;
+package com.heanoria.reminders.kafkasample.models;
 
 import java.io.Serializable;
 
