@@ -1,4 +1,4 @@
-package com.heanoria.reminders.kafkasample.producer.configuration;
+package com.heanoria.reminders.kafkasample.producer.configuration.technical;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,7 @@ import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonSerializer;
-import com.heanoria.reminders.kafkasample.models.Music;
+import com.heanoria.reminders.kafkasample.models.Album;
 import com.heanoria.reminders.kafkasample.producer.services.ProducerService;
 
 @Configuration
@@ -36,17 +36,17 @@ public class ProducerConfiguration {
 	}
 
 	@Bean
-	public ProducerFactory<String, Music> producerFactory() {
+	public ProducerFactory<String, Album> producerFactory() {
 		return new DefaultKafkaProducerFactory<>(producerConfigs());
 	}
 
 	@Bean
-	public KafkaTemplate<String, Music> kafkaTemplate() {
+	public KafkaTemplate<String, Album> kafkaTemplate() {
 		return new KafkaTemplate<>(producerFactory());
 	}
 
 	@Bean
-	public ProducerService sender(KafkaTemplate<String, Music> kafkaTemplate){
+	public ProducerService sender(KafkaTemplate<String, Album> kafkaTemplate){
 		return new ProducerService(this.topic, kafkaTemplate);
 	}
 }

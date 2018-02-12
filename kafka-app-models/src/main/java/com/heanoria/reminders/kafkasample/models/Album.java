@@ -2,10 +2,10 @@ package com.heanoria.reminders.kafkasample.models;
 
 import java.io.Serializable;
 
-public class Music implements Serializable {
+public class Album implements Serializable {
 
     private String title;
-    private String author;
+    private String artist;
 
     public String getTitle() {
         return title;
@@ -15,19 +15,19 @@ public class Music implements Serializable {
         this.title = title;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getArtist() {
+        return artist;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 
     @Override
     public String toString() {
-        return "Music{" +
+        return "Album{" +
                 "title='" + title + '\'' +
-                ", author='" + author + '\'' +
+                ", artist='" + artist + '\'' +
                 '}';
     }
 }

@@ -6,9 +6,9 @@ messaging:
     offset-reset: earliest
     max-poll-interval-ms: 10000
     poll-timeout-ms: 100
-    max-poll-records: 20
+    max-poll-records: 100
   topics:
-    - names: musics
-      group: musics-grp
-      consumer-number: 5
-      deserializer: com.heanoria.reminders.kafkasample.consumer.deserializers.MusicDeserializer
+    - names: albums
+      group: albums-grp
+      consumer-number: 15
+      deserializer: com.heanoria.reminders.kafkasample.consumer.deserializers.AlbumDeserializer

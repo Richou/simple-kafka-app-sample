@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import com.heanoria.reminders.kafkasample.consumer.observer.MusicsTopicObserver;
+import com.heanoria.reminders.kafkasample.consumer.observer.AlbumsTopicObserver;
 import com.heanoria.reminders.kafkasample.consumer.observer.UnimplementedObserver;
 
 import io.reactivex.Observer;
 
 public enum TopicEnum {
-	MUSICS("musics", MusicsTopicObserver::new),
+	MUSICS("musics", AlbumsTopicObserver::new),
 	UNKNOWN("unknown", UnimplementedObserver::new)
 	;
 

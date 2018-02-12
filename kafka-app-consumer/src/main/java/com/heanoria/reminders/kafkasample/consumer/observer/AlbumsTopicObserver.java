@@ -6,9 +6,9 @@ import io.reactivex.disposables.Disposable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MusicsTopicObserver implements Observer<MessageContainer> {
+public class AlbumsTopicObserver implements Observer<MessageContainer> {
 
-    private static final Logger logger = LoggerFactory.getLogger(MusicsTopicObserver.class);
+    private static final Logger logger = LoggerFactory.getLogger(AlbumsTopicObserver.class);
 
     @Override
     public void onSubscribe(Disposable disposable) {

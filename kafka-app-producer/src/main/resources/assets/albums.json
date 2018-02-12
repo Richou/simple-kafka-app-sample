@@ -1,0 +1,1016 @@
+{
+    "albums": [
+        {
+            "title": "All doubt",
+            "artist": "amber"
+        },
+        {
+            "title": "All ears",
+            "artist": "ash"
+        },
+        {
+            "title": "Animal kingdom",
+            "artist": "autumn"
+        },
+        {
+            "title": "Animals",
+            "artist": "axe"
+        },
+        {
+            "title": "Apparatus",
+            "artist": "barley"
+        },
+        {
+            "title": "Apples and oranges",
+            "artist": "battle"
+        },
+        {
+            "title": "Army of ants",
+            "artist": "bear"
+        },
+        {
+            "title": "Around the bush",
+            "artist": "black"
+        },
+        {
+            "title": "Ask and receive",
+            "artist": "blade"
+        },
+        {
+            "title": "Atmos",
+            "artist": "blaze"
+        },
+        {
+            "title": "Atmosphere",
+            "artist": "blood"
+        },
+        {
+            "title": "Audience",
+            "artist": "blue"
+        },
+        {
+            "title": "Background check",
+            "artist": "bone"
+        },
+        {
+            "title": "Badge of honor",
+            "artist": "boulder"
+        },
+        {
+            "title": "Bag of mysteries",
+            "artist": "bright"
+        },
+        {
+            "title": "Balls to the wall",
+            "artist": "bronze"
+        },
+        {
+            "title": "Bank fault",
+            "artist": "burning"
+        },
+        {
+            "title": "Bankrupcy",
+            "artist": "cask"
+        },
+        {
+            "title": "Bare to the bone",
+            "artist": "chest"
+        },
+        {
+            "title": "Barrage of noise",
+            "artist": "cinder"
+        },
+        {
+            "title": "Baseless",
+            "artist": "clan"
+        },
+        {
+            "title": "Basket case",
+            "artist": "claw"
+        },
+        {
+            "title": "Battle grounds",
+            "artist": "clear"
+        },
+        {
+            "title": "Battle with myself",
+            "artist": "cliff"
+        },
+        {
+            "title": "Battleborn",
+            "artist": "cloud"
+        },
+        {
+            "title": "Battleground",
+            "artist": "cold"
+        },
+        {
+            "title": "Beads",
+            "artist": "common"
+        },
+        {
+            "title": "Beads of sweat",
+            "artist": "coven"
+        },
+        {
+            "title": "Beasts of beauty",
+            "artist": "crag"
+        },
+        {
+            "title": "Beautiful beasts",
+            "artist": "crest"
+        },
+        {
+            "title": "Bed of roses",
+            "artist": "crow"
+        },
+        {
+            "title": "Beggars and thieves",
+            "artist": "crystal"
+        },
+        {
+            "title": "Beginner's luck",
+            "artist": "dark"
+        },
+        {
+            "title": "Bent out of shape",
+            "artist": "dawn"
+        },
+        {
+            "title": "Beyond infinity",
+            "artist": "day"
+        },
+        {
+            "title": "Big bad wolf",
+            "artist": "dead"
+        },
+        {
+            "title": "Birthday suit",
+            "artist": "death"
+        },
+        {
+            "title": "Bitten bullet",
+            "artist": "deep"
+        },
+        {
+            "title": "Bittersweet",
+            "artist": "dew"
+        },
+        {
+            "title": "Blank canvas",
+            "artist": "dirge"
+        },
+        {
+            "title": "Blinded by fame",
+            "artist": "distant"
+        },
+        {
+            "title": "Blissful ignorance",
+            "artist": "doom"
+        },
+        {
+            "title": "Bloodlust",
+            "artist": "down"
+        },
+        {
+            "title": "Blue moon",
+            "artist": "dragon"
+        },
+        {
+            "title": "Bold fortune",
+            "artist": "dream"
+        },
+        {
+            "title": "Bonus",
+            "artist": "dusk"
+        },
+        {
+            "title": "Bottom's up",
+            "artist": "dust"
+        },
+        {
+            "title": "Brain teaser",
+            "artist": "eagle"
+        },
+        {
+            "title": "Breaking bread",
+            "artist": "earth"
+        },
+        {
+            "title": "Broken ice",
+            "artist": "elf"
+        },
+        {
+            "title": "Bullet bites",
+            "artist": "ember"
+        },
+        {
+            "title": "Burning bridges",
+            "artist": "even"
+        },
+        {
+            "title": "Bursted bubble",
+            "artist": "fallen"
+        },
+        {
+            "title": "Bursting bubbles",
+            "artist": "far"
+        },
+        {
+            "title": "Bursting out of my skin",
+            "artist": "farrow"
+        },
+        {
+            "title": "Cabinet of fools",
+            "artist": "feather"
+        },
+        {
+            "title": "Calm after the storm",
+            "artist": "fern"
+        },
+        {
+            "title": "Cat eat cat world",
+            "artist": "fire"
+        },
+        {
+            "title": "Cat got my tongue",
+            "artist": "fist"
+        },
+        {
+            "title": "Cat killed curiosity",
+            "artist": "flame"
+        },
+        {
+            "title": "Cat napped",
+            "artist": "flat"
+        },
+        {
+            "title": "Catch twentythree",
+            "artist": "flint"
+        },
+        {
+            "title": "Cattle in the sky",
+            "artist": "fog"
+        },
+        {
+            "title": "Cemetery of the living",
+            "artist": "fore"
+        },
+        {
+            "title": "Chained down",
+            "artist": "forest"
+        },
+        {
+            "title": "Channel of hatred",
+            "artist": "four"
+        },
+        {
+            "title": "Chaos",
+            "artist": "free"
+        },
+        {
+            "title": "Chaos theory",
+            "artist": "frost"
+        },
+        {
+            "title": "Cherry",
+            "artist": "frozen"
+        },
+        {
+            "title": "Childhood memoires",
+            "artist": "full"
+        },
+        {
+            "title": "Chip off the old block",
+            "artist": "fuse"
+        },
+        {
+            "title": "Circle of death",
+            "artist": "gloom"
+        },
+        {
+            "title": "Class act",
+            "artist": "glory"
+        },
+        {
+            "title": "Climate changed",
+            "artist": "glow"
+        },
+        {
+            "title": "Cloud nine",
+            "artist": "gold"
+        },
+        {
+            "title": "Cobweb of lies",
+            "artist": "gore"
+        },
+        {
+            "title": "Code word",
+            "artist": "grand"
+        },
+        {
+            "title": "Cold shoulder",
+            "artist": "grass"
+        },
+        {
+            "title": "Collar of bones",
+            "artist": "gray"
+        },
+        {
+            "title": "Commercial brake",
+            "artist": "great"
+        },
+        {
+            "title": "Commercial break",
+            "artist": "green"
+        },
+        {
+            "title": "Committee of despair",
+            "artist": "grizzly"
+        },
+        {
+            "title": "Company of two",
+            "artist": "hallow"
+        },
+        {
+            "title": "Concept art",
+            "artist": "hallowed"
+        },
+        {
+            "title": "Cookie cutter",
+            "artist": "hammer"
+        },
+        {
+            "title": "Courage of fools",
+            "artist": "hard"
+        },
+        {
+            "title": "Crazy eyes",
+            "artist": "haven"
+        },
+        {
+            "title": "Creative director",
+            "artist": "hawk"
+        },
+        {
+            "title": "Crime of the century",
+            "artist": "haze"
+        },
+        {
+            "title": "Criss cross",
+            "artist": "heart"
+        },
+        {
+            "title": "Crocodile tears",
+            "artist": "heavy"
+        },
+        {
+            "title": "Crossing a bridge",
+            "artist": "hell"
+        },
+        {
+            "title": "Crowd control",
+            "artist": "high"
+        },
+        {
+            "title": "Crowd funding",
+            "artist": "hill"
+        },
+        {
+            "title": "Curiosity",
+            "artist": "holy"
+        },
+        {
+            "title": "Curiosity's death",
+            "artist": "honor"
+        },
+        {
+            "title": "Curtain fall",
+            "artist": "horse"
+        },
+        {
+            "title": "Curves",
+            "artist": "humble"
+        },
+        {
+            "title": "Cutting corners",
+            "artist": "hydra"
+        },
+        {
+            "title": "Damage control",
+            "artist": "ice"
+        },
+        {
+            "title": "Dark matters",
+            "artist": "iron"
+        },
+        {
+            "title": "Death of roses",
+            "artist": "keen"
+        },
+        {
+            "title": "Death's dead",
+            "artist": "laughing"
+        },
+        {
+            "title": "Decisions decisions",
+            "artist": "leaf"
+        },
+        {
+            "title": "Dedication",
+            "artist": "light"
+        },
+        {
+            "title": "Dedication to the cause",
+            "artist": "lightning"
+        },
+        {
+            "title": "Devil's advocate",
+            "artist": "lion"
+        },
+        {
+            "title": "Devil's details",
+            "artist": "lone"
+        },
+        {
+            "title": "Dime in a half dozen",
+            "artist": "long"
+        },
+        {
+            "title": "Dime in two dozen",
+            "artist": "low"
+        },
+        {
+            "title": "Dinner for one",
+            "artist": "luna"
+        },
+        {
+            "title": "District zero",
+            "artist": "marble"
+        },
+        {
+            "title": "Doctor in the house",
+            "artist": "marsh"
+        },
+        {
+            "title": "Don't push this button",
+            "artist": "master"
+        },
+        {
+            "title": "Double trouble",
+            "artist": "meadow"
+        },
+        {
+            "title": "Down in flames",
+            "artist": "mild"
+        },
+        {
+            "title": "Drawing board",
+            "artist": "mirth"
+        },
+        {
+            "title": "Dread and horror",
+            "artist": "mist"
+        },
+        {
+            "title": "Dream big",
+            "artist": "molten"
+        },
+        {
+            "title": "Dreams and nightmares",
+            "artist": "monster"
+        },
+        {
+            "title": "Easy doesn't do it",
+            "artist": "moon"
+        },
+        {
+            "title": "Election perfection",
+            "artist": "morning"
+        },
+        {
+            "title": "Elephant in the room",
+            "artist": "moss"
+        },
+        {
+            "title": "Emergency",
+            "artist": "mountain"
+        },
+        {
+            "title": "Emotional wreckage",
+            "artist": "mourn"
+        },
+        {
+            "title": "Equivalent exchange",
+            "artist": "mourning"
+        },
+        {
+            "title": "Experience required",
+            "artist": "nether"
+        },
+        {
+            "title": "Expert opinion",
+            "artist": "nickle"
+        },
+        {
+            "title": "Eye for an eye",
+            "artist": "night"
+        },
+        {
+            "title": "Eye of the camera",
+            "artist": "noble"
+        },
+        {
+            "title": "Eye to eye",
+            "artist": "nose"
+        },
+        {
+            "title": "Fascination",
+            "artist": "oat"
+        },
+        {
+            "title": "Fault of treasures",
+            "artist": "ocean"
+        },
+        {
+            "title": "Favoritism",
+            "artist": "orb"
+        },
+        {
+            "title": "Feast of nothing",
+            "artist": "pale"
+        },
+        {
+            "title": "Fifth chance",
+            "artist": "peace"
+        },
+        {
+            "title": "Fight and flight",
+            "artist": "phoenix"
+        },
+        {
+            "title": "Final breath",
+            "artist": "pine"
+        },
+        {
+            "title": "Final draft",
+            "artist": "plain"
+        },
+        {
+            "title": "Final hour",
+            "artist": "pride"
+        },
+        {
+            "title": "Final impact",
+            "artist": "proud"
+        },
+        {
+            "title": "Final straw",
+            "artist": "pyre"
+        },
+        {
+            "title": "First chance",
+            "artist": "rage"
+        },
+        {
+            "title": "Five-leaf clover",
+            "artist": "rain"
+        },
+        {
+            "title": "Flower shower",
+            "artist": "rapid"
+        },
+        {
+            "title": "Fluke",
+            "artist": "raven"
+        },
+        {
+            "title": "Focus",
+            "artist": "red"
+        },
+        {
+            "title": "For eternity",
+            "artist": "regal"
+        },
+        {
+            "title": "For two songs",
+            "artist": "rich"
+        },
+        {
+            "title": "Forever alone",
+            "artist": "river"
+        },
+        {
+            "title": "Form over function",
+            "artist": "rock"
+        },
+        {
+            "title": "Fourth dimension",
+            "artist": "rose"
+        },
+        {
+            "title": "From insult to injury",
+            "artist": "rough"
+        },
+        {
+            "title": "Function over form",
+            "artist": "rumble"
+        },
+        {
+            "title": "Game on",
+            "artist": "rune"
+        },
+        {
+            "title": "Ghost stories",
+            "artist": "sacred"
+        },
+        {
+            "title": "Glass house",
+            "artist": "sage"
+        },
+        {
+            "title": "Glass houses",
+            "artist": "saur"
+        },
+        {
+            "title": "Glass shoe",
+            "artist": "sea"
+        },
+        {
+            "title": "God's advocate",
+            "artist": "serpent"
+        },
+        {
+            "title": "Golden lining",
+            "artist": "shade"
+        },
+        {
+            "title": "Grains of salt",
+            "artist": "shadow"
+        },
+        {
+            "title": "Grains of sand",
+            "artist": "sharp"
+        },
+        {
+            "title": "Greener grass",
+            "artist": "shield"
+        },
+        {
+            "title": "Hand in hand",
+            "artist": "silent"
+        },
+        {
+            "title": "Here we go",
+            "artist": "silver"
+        },
+        {
+            "title": "Here we go again",
+            "artist": "simple"
+        },
+        {
+            "title": "Highest difficulty",
+            "artist": "single"
+        },
+        {
+            "title": "Hit the road",
+            "artist": "skull"
+        },
+        {
+            "title": "Hold the phone",
+            "artist": "sky"
+        },
+        {
+            "title": "Honestly",
+            "artist": "slate"
+        },
+        {
+            "title": "Honesty",
+            "artist": "smart"
+        },
+        {
+            "title": "Ice cold",
+            "artist": "snake"
+        },
+        {
+            "title": "Impulse reaction",
+            "artist": "snow"
+        },
+        {
+            "title": "Infatuation",
+            "artist": "soft"
+        },
+        {
+            "title": "Intervention",
+            "artist": "solid"
+        },
+        {
+            "title": "Ire desire",
+            "artist": "spider"
+        },
+        {
+            "title": "Just a tease",
+            "artist": "spirit"
+        },
+        {
+            "title": "Just the beginning",
+            "artist": "spring"
+        },
+        {
+            "title": "Kicked buckets",
+            "artist": "stag"
+        },
+        {
+            "title": "Knowledge bomb",
+            "artist": "star"
+        },
+        {
+            "title": "Last candidate",
+            "artist": "steel"
+        },
+        {
+            "title": "Let's do it",
+            "artist": "stern"
+        },
+        {
+            "title": "Let's do this",
+            "artist": "still"
+        },
+        {
+            "title": "Library of liberty",
+            "artist": "stone"
+        },
+        {
+            "title": "Life knowledge",
+            "artist": "storm"
+        },
+        {
+            "title": "Live and learn",
+            "artist": "stout"
+        },
+        {
+            "title": "Long story short",
+            "artist": "strong"
+        },
+        {
+            "title": "Louder actions",
+            "artist": "summer"
+        },
+        {
+            "title": "Louder than words",
+            "artist": "sun"
+        },
+        {
+            "title": "Love",
+            "artist": "swift"
+        },
+        {
+            "title": "Love life",
+            "artist": "tall"
+        },
+        {
+            "title": "MVP",
+            "artist": "tarren"
+        },
+        {
+            "title": "March of ants",
+            "artist": "terra"
+        },
+        {
+            "title": "Methodical madness",
+            "artist": "three"
+        },
+        {
+            "title": "Midnight oil",
+            "artist": "thunder"
+        },
+        {
+            "title": "Missed the boat",
+            "artist": "titan"
+        },
+        {
+            "title": "Moonquake",
+            "artist": "tree"
+        },
+        {
+            "title": "My goodness",
+            "artist": "true"
+        },
+        {
+            "title": "Nemesis",
+            "artist": "truth"
+        },
+        {
+            "title": "New dimension",
+            "artist": "tusk"
+        },
+        {
+            "title": "Nine yards",
+            "artist": "twilight"
+        },
+        {
+            "title": "No ambition",
+            "artist": "two"
+        },
+        {
+            "title": "No basis",
+            "artist": "void"
+        },
+        {
+            "title": "No boundaries",
+            "artist": "war"
+        },
+        {
+            "title": "No celebration",
+            "artist": "water"
+        },
+        {
+            "title": "No choice",
+            "artist": "wheat"
+        },
+        {
+            "title": "No comment",
+            "artist": "whisper"
+        },
+        {
+            "title": "No direction",
+            "artist": "whit"
+        },
+        {
+            "title": "No discounts",
+            "artist": "white"
+        },
+        {
+            "title": "No foundations",
+            "artist": "wild"
+        },
+        {
+            "title": "No guarantees",
+            "artist": "willow"
+        },
+        {
+            "title": "No history",
+            "artist": "wind"
+        },
+        {
+            "title": "No justice",
+            "artist": "winter"
+        },
+        {
+            "title": "Once bitten",
+            "artist": "wise"
+        },
+        {
+            "title": "Parliment of fools",
+            "artist": "wolf"
+        },
+        {
+            "title": "Patient zero",
+            "artist": "wood"
+        },
+        {
+            "title": "Perfect storm",
+            "artist": "wooden"
+        },
+        {
+            "title": "Preaching choir",
+            "artist": "wyvern"
+        },
+        {
+            "title": "Pushing buttons",
+            "artist": "young"
+        },
+        {
+            "title": "Pushing up daisies",
+            "artist": "alpen"
+        },
+        {
+            "title": "Rain check",
+            "artist": "amber"
+        },
+        {
+            "title": "Rocket science",
+            "artist": "ash"
+        },
+        {
+            "title": "Rocket surgery",
+            "artist": "autumn"
+        },
+        {
+            "title": "Salt and sugar",
+            "artist": "axe"
+        },
+        {
+            "title": "Silver linings",
+            "artist": "barley"
+        },
+        {
+            "title": "Sleeping dogs",
+            "artist": "battle"
+        },
+        {
+            "title": "So far so great",
+            "artist": "bear"
+        },
+        {
+            "title": "Speak of the demon",
+            "artist": "black"
+        },
+        {
+            "title": "Speak of the god",
+            "artist": "blade"
+        },
+        {
+            "title": "Special delivery",
+            "artist": "blaze"
+        },
+        {
+            "title": "Spilled beans",
+            "artist": "blood"
+        },
+        {
+            "title": "Sweetbitter",
+            "artist": "blue"
+        },
+        {
+            "title": "Take cover",
+            "artist": "bone"
+        },
+        {
+            "title": "The bigger fish",
+            "artist": "boulder"
+        },
+        {
+            "title": "The drawing board",
+            "artist": "bright"
+        },
+        {
+            "title": "The fat lady sings",
+            "artist": "bronze"
+        },
+        {
+            "title": "The last laugh",
+            "artist": "burning"
+        },
+        {
+            "title": "The last straw",
+            "artist": "cask"
+        },
+        {
+            "title": "This belief",
+            "artist": "chest"
+        },
+        {
+            "title": "Time flies",
+            "artist": "cinder"
+        },
+        {
+            "title": "Tongue and cheeks",
+            "artist": "clan"
+        },
+        {
+            "title": "Total destruction",
+            "artist": "claw"
+        },
+        {
+            "title": "Two to tango",
+            "artist": "clear"
+        },
+        {
+            "title": "Unchained",
+            "artist": "cliff"
+        },
+        {
+            "title": "Under the bus",
+            "artist": "cloud"
+        },
+        {
+            "title": "Unhappy accident",
+            "artist": "cold"
+        },
+        {
+            "title": "Wild goose chase",
+            "artist": "common"
+        },
+        {
+            "title": "With feeling",
+            "artist": "coven"
+        },
+        {
+            "title": "X marks the spot",
+            "artist": "crag"
+        },
+        {
+            "title": "Your graciousness",
+            "artist": "crest"
+        },
+        {
+            "title": "Zero experience",
+            "artist": "crow"
+        },
+        {
+            "title": "Zero gravity",
+            "artist": "crystal"
+        }
+    ]
+}
