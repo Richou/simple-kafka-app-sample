@@ -14,7 +14,7 @@ public class SendAlbumFacade {
     }
 
     public void sendMessages() {
-        for (int index = 0; index < 400; index++) {
+        for (int index = 0; index < 5000; index++) {
             service.send(process.getRandomAlbum());
         }
     }

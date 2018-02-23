@@ -22,7 +22,7 @@ public class AlbumsTopicObserver implements Observer<MessageContainer> {
                 logger.error("Error received", messageContainer.getException());
             } else {
                 logger.info("Received {}", messageContainer.getValue());
-                Thread.sleep(500);
+                Thread.sleep(150);
             }
         } catch (InterruptedException exception) {
             logger.error("Interrupted", exception);
