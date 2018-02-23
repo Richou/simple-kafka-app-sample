@@ -5,12 +5,16 @@ import com.heanoria.reminders.kafkasample.consumer.configuration.properties.Cons
 import com.heanoria.reminders.kafkasample.consumer.configuration.properties.TopicProperties;
 import com.heanoria.reminders.kafkasample.consumer.datas.TopicEnum;
 import io.reactivex.Observer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ConsumersTopic {
+
+	private final static Logger logger = LoggerFactory.getLogger(ConsumersTopic.class);
 
 	private final ConsumerProperties consumerProperties;
 	private final BrokerProperties brokerProperties;
@@ -26,6 +30,7 @@ public class ConsumersTopic {
 	}
 
 	private void createRxConsumer() {
+	    logger.info("Creating {} consumers", topicProperties.getConsumerNumber());
 		for (int index = 0; index < topicProperties.getConsumerNumber(); index ++) {
 			this.consumers.add(new RxJsonConsumer(consumerProperties, brokerProperties, topicProperties));
 		}

@@ -1,5 +1,6 @@
 package com.heanoria.reminders.kafkasample.consumer.deserializers;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.common.errors.SerializationException;
 import org.apache.kafka.common.serialization.Deserializer;
@@ -20,6 +21,8 @@ public class JsonDeserializer<T extends Serializable> implements Deserializer<T>
 
     public JsonDeserializer(ObjectMapper objectMapper, Class<T> toClazz) {
         this.objectMapper = objectMapper;
+        this.objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        this.objectMapper.configure(DeserializationFeature.FAIL_ON_IGNORED_PROPERTIES, false);
         this.toClazz = toClazz;
     }
     @Override

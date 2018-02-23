@@ -2,13 +2,13 @@ messaging:
   broker:
     hosts: localhost:9092,localhost:9093,localhost:9094
   consumer:
-    session-timeout-ms: 10000
+    session-timeout-ms: 30000
     offset-reset: earliest
-    max-poll-interval-ms: 10000
-    poll-timeout-ms: 100
+    max-poll-interval-ms: 300000
+    poll-timeout-ms: 200
     max-poll-records: 100
   topics:
     - names: albums
       group: albums-grp
-      consumer-number: 15
+      consumer-number: 5
       deserializer: com.heanoria.reminders.kafkasample.consumer.deserializers.AlbumDeserializer

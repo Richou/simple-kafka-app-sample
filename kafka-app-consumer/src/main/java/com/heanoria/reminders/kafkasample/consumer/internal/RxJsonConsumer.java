@@ -38,6 +38,7 @@ public class RxJsonConsumer {
 
     public Observable toObservable() {
         return Observable.create(emitter -> {
+            logger.info("Creating Observable on {} topic", topicProperties.getNames());
             this.consumer.subscribe(Arrays.asList(topicProperties.getNames().split(",")));
             while (true) {
                 try {
@@ -45,9 +46,10 @@ public class RxJsonConsumer {
                     if (!records.isEmpty()) logger.info("Received {} message from {} topic(s)", records.count(), topicProperties.getNames());
                     for (ConsumerRecord<String, Serializable> record : records) {
                         if (record.value() != null) {
-                            logger.debug("Received message, with key {} and offset {} with value {} on topic {}", record.key(), record.offset(), record.value(), record.topic());
+                            logger.info("Received message, with key {} and offset {} with value {} on topic {}", record.key(), record.offset(), record.value(), record.topic());
                             emitter.onNext(MessageContainer.builder().value(record.value()).buildValidMessage());
                         } else {
+                            logger.error("Error value not well formatted");
                             emitter.onNext(MessageContainer.builder().exception(new IllegalArgumentException("Invalid Message")).buildErrorMessage());
                         }
                     }
@@ -56,7 +58,7 @@ public class RxJsonConsumer {
                     emitter.onNext(MessageContainer.builder().exception(exception).buildErrorMessage());
                 }
             }
-        }).subscribeOn(Schedulers.io());
+        }).subscribeOn(Schedulers.newThread());
     }
 
     private Properties createConsumerConfig() {

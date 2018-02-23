@@ -10,7 +10,7 @@ import com.heanoria.reminders.kafkasample.consumer.observer.UnimplementedObserve
 import io.reactivex.Observer;
 
 public enum TopicEnum {
-	MUSICS("musics", AlbumsTopicObserver::new),
+	ALBUMS("albums", AlbumsTopicObserver::new),
 	UNKNOWN("unknown", UnimplementedObserver::new)
 	;
 
