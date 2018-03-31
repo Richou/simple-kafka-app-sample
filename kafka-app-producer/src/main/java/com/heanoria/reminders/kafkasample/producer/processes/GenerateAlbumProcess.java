@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.Random;
+import java.util.UUID;
 
 public class GenerateAlbumProcess {
 
@@ -25,7 +26,9 @@ public class GenerateAlbumProcess {
 
     public Album getRandomAlbum() {
         Random r = new Random();
-        return albums.get(r.nextInt(albums.getSize()));
+        Album randomAlbum = albums.get(r.nextInt(albums.getSize()));
+        randomAlbum.setId(UUID.randomUUID());
+        return randomAlbum;
     }
 
     private Albums getAlbums() {

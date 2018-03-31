@@ -1,11 +1,21 @@
 package com.heanoria.reminders.kafkasample.models;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class Album implements Serializable {
 
+    private UUID id;
     private String title;
     private String artist;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -26,7 +36,8 @@ public class Album implements Serializable {
     @Override
     public String toString() {
         return "Album{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", artist='" + artist + '\'' +
                 '}';
     }

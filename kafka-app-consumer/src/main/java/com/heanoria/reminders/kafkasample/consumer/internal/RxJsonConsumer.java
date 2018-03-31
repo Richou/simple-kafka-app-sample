@@ -40,7 +40,8 @@ public class RxJsonConsumer {
         return Observable.create(emitter -> {
             logger.info("Creating Observable on {} topic", topicProperties.getNames());
             this.consumer.subscribe(Arrays.asList(topicProperties.getNames().split(",")));
-            while (true) {
+            Boolean isRunning = true;
+            while (isRunning) {
                 try {
                     ConsumerRecords<String, Serializable> records = consumer.poll(pollTimeoutMs);
                     if (!records.isEmpty()) logger.info("Received {} message from {} topic(s)", records.count(), topicProperties.getNames());
@@ -53,9 +54,11 @@ public class RxJsonConsumer {
                             emitter.onNext(MessageContainer.builder().exception(new IllegalArgumentException("Invalid Message")).buildErrorMessage());
                         }
                     }
-                    this.consumer.commitSync();
                 } catch (Exception exception) {
+                    logger.error("Caught exception Stopping consumer immediately");
                     emitter.onNext(MessageContainer.builder().exception(exception).buildErrorMessage());
+                    this.consumer.close();
+                    isRunning = false;
                 }
             }
         }).subscribeOn(Schedulers.newThread());
@@ -65,7 +68,8 @@ public class RxJsonConsumer {
         Properties consumerConfig = new Properties();
         consumerConfig.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, brokerProperties.getHosts());
         consumerConfig.put(ConsumerConfig.GROUP_ID_CONFIG, topicProperties.getGroup());
-        consumerConfig.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
+        consumerConfig.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, true);
+        consumerConfig.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, 100);
         consumerConfig.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, consumerProperties.getSessionTimeoutMs());
         consumerConfig.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         consumerConfig.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, topicProperties.getDeserializer());
