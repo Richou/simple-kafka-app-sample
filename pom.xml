@@ -12,19 +12,21 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.9.RELEASE</version>
+        <version>2.0.1.RELEASE</version>
     </parent>
 
     <modules>
         <module>kafka-app-consumer</module>
         <module>kafka-app-producer</module>
         <module>kafka-app-models</module>
+        <module>kafka-app-datastore</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
         <kafka.version>1.0.0</kafka.version>
         <rx.version>2.1.8</rx.version>
+        <lombok.version>1.16.20</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -32,6 +34,11 @@
             <dependency>
                 <groupId>com.heanoria.reminders.kafkasample</groupId>
                 <artifactId>kafka-app-models</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.heanoria.reminders.kafkasample</groupId>
+                <artifactId>kafka-app-datastore</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -48,6 +55,11 @@
                 <groupId>io.reactivex.rxjava2</groupId>
                 <artifactId>rxjava</artifactId>
                 <version>${rx.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

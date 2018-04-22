@@ -3,7 +3,10 @@ package com.heanoria.reminders.kafkasample.consumer.internal;
 import com.heanoria.reminders.kafkasample.consumer.configuration.properties.BrokerProperties;
 import com.heanoria.reminders.kafkasample.consumer.configuration.properties.ConsumerProperties;
 import com.heanoria.reminders.kafkasample.consumer.configuration.properties.TopicProperties;
+import com.heanoria.reminders.kafkasample.consumer.datas.ConsumersTopicContext;
 import com.heanoria.reminders.kafkasample.consumer.datas.TopicEnum;
+import com.heanoria.reminders.kafkasample.consumer.factories.TopicMessageHandlerFactory;
+import com.heanoria.reminders.kafkasample.consumer.observer.TopicObserver;
 import io.reactivex.Observer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +21,15 @@ public class ConsumersTopic {
 
 	private final ConsumerProperties consumerProperties;
 	private final BrokerProperties brokerProperties;
-	private final List<RxJsonConsumer> consumers;
 	private final TopicProperties topicProperties;
+	private final TopicMessageHandlerFactory topicMessageHandlerFactory;
+	private final List<RxJsonConsumer> consumers;
 
-	public ConsumersTopic(ConsumerProperties consumerProperties, BrokerProperties brokerProperties, TopicProperties topicProperties) {
-		this.consumerProperties = consumerProperties;
-		this.brokerProperties = brokerProperties;
-		this.topicProperties = topicProperties;
+	public ConsumersTopic(ConsumersTopicContext consumersTopicContext) {
+		this.consumerProperties = consumersTopicContext.getConsumerProperties();
+		this.brokerProperties = consumersTopicContext.getBrokerProperties();
+		this.topicProperties = consumersTopicContext.getTopicProperties();
+		this.topicMessageHandlerFactory = consumersTopicContext.getTopicMessageHandlerFactory();
 		this.consumers = new ArrayList<>();
 		createRxConsumer();
 	}
@@ -41,6 +46,9 @@ public class ConsumersTopic {
 	}
 
 	private Observer pickupObserver() {
-		return TopicEnum.findByTopics(topicProperties.getNames()).getObserver();
+        TopicEnum byTopics = TopicEnum.findByTopics(topicProperties.getNames());
+        TopicObserver topicObserver = byTopics.getObserver();
+        topicObserver.registerMessageHandler(topicMessageHandlerFactory.getMessageHandlerByTopic(byTopics));
+        return topicObserver;
 	}
 }

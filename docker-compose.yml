@@ -1,5 +1,10 @@
-version: '2.1'
+version: '3.2'
 services:
+  db:
+    image: mongo
+    container_name: hnr-database
+    ports:
+      - 27017:27017
   zookeeper:
     image: wurstmeister/zookeeper
     container_name: hnr-zookeeper
@@ -12,13 +17,13 @@ services:
       - 9092:9092
     depends_on:
       - zookeeper
-    links:
-      - zookeeper
+    networks:
+      - default
     environment:
       - KAFKA_PORT=9092
       - KAFKA_ADVERTISED_HOST_NAME=${ADVERTISED_HOSTNAME}
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-      - KAFKA_CREATE_TOPICS=albums:15:3
+      - KAFKA_CREATE_TOPICS=albums:5:3
   kafka-2:
     image: wurstmeister/kafka
     container_name: hnr-kafka-2
@@ -26,13 +31,13 @@ services:
       - 9093:9093
     depends_on:
       - zookeeper
-    links:
-      - zookeeper
+    networks:
+      - default
     environment:
       - KAFKA_PORT=9093
       - KAFKA_ADVERTISED_HOST_NAME=${ADVERTISED_HOSTNAME}
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-      - KAFKA_CREATE_TOPICS=albums:15:3
+      - KAFKA_CREATE_TOPICS=albums:5:3
   kafka-3:
     image: wurstmeister/kafka
     container_name: hnr-kafka-3
@@ -40,10 +45,13 @@ services:
       - 9094:9094
     depends_on:
       - zookeeper
-    links:
-      - zookeeper
+    networks:
+      - default
     environment:
       - KAFKA_PORT=9094
       - KAFKA_ADVERTISED_HOST_NAME=${ADVERTISED_HOSTNAME}
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-      - KAFKA_CREATE_TOPICS=albums:15:3
+      - KAFKA_CREATE_TOPICS=albums:5:3
+networks:
+  default:
+    driver: bridge

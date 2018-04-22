@@ -12,3 +12,8 @@ messaging:
       group: albums-grp
       consumer-number: 5
       deserializer: com.heanoria.reminders.kafkasample.consumer.deserializers.AlbumDeserializer
+spring:
+  data:
+    mongodb:
+      database: discotheque
+      uri: mongodb://localhost

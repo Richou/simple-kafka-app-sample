@@ -54,6 +54,7 @@ public class RxJsonConsumer {
                             emitter.onNext(MessageContainer.builder().exception(new IllegalArgumentException("Invalid Message")).buildErrorMessage());
                         }
                     }
+                    this.consumer.commitAsync();
                 } catch (Exception exception) {
                     logger.error("Caught exception Stopping consumer immediately");
                     emitter.onNext(MessageContainer.builder().exception(exception).buildErrorMessage());
@@ -68,8 +69,7 @@ public class RxJsonConsumer {
         Properties consumerConfig = new Properties();
         consumerConfig.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, brokerProperties.getHosts());
         consumerConfig.put(ConsumerConfig.GROUP_ID_CONFIG, topicProperties.getGroup());
-        consumerConfig.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, true);
-        consumerConfig.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, 100);
+        consumerConfig.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
         consumerConfig.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, consumerProperties.getSessionTimeoutMs());
         consumerConfig.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         consumerConfig.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, topicProperties.getDeserializer());

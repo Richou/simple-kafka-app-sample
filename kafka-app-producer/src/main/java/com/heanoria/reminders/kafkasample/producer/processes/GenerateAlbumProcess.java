@@ -4,13 +4,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.heanoria.reminders.kafkasample.models.Album;
 import com.heanoria.reminders.kafkasample.models.Albums;
 import org.apache.commons.io.IOUtils;
+import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.Random;
-import java.util.UUID;
 
 public class GenerateAlbumProcess {
 
@@ -27,7 +27,7 @@ public class GenerateAlbumProcess {
     public Album getRandomAlbum() {
         Random r = new Random();
         Album randomAlbum = albums.get(r.nextInt(albums.getSize()));
-        randomAlbum.setId(UUID.randomUUID());
+        randomAlbum.setId(ObjectId.get().toString());
         return randomAlbum;
     }
 

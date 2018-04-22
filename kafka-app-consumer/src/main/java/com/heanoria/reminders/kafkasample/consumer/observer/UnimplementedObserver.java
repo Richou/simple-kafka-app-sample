@@ -1,10 +1,10 @@
 package com.heanoria.reminders.kafkasample.consumer.observer;
 
 import com.heanoria.reminders.kafkasample.consumer.datas.MessageContainer;
-import io.reactivex.Observer;
+import com.heanoria.reminders.kafkasample.consumer.handlers.UnimplementedMessageHandler;
 import io.reactivex.disposables.Disposable;
 
-public class UnimplementedObserver implements Observer<MessageContainer> {
+public class UnimplementedObserver implements TopicObserver<UnimplementedMessageHandler> {
 	@Override
 	public void onSubscribe(Disposable disposable) {
 
@@ -22,6 +22,11 @@ public class UnimplementedObserver implements Observer<MessageContainer> {
 
 	@Override
 	public void onComplete() {
+
+	}
+
+	@Override
+	public void registerMessageHandler(UnimplementedMessageHandler messageHandler) {
 
 	}
 }
